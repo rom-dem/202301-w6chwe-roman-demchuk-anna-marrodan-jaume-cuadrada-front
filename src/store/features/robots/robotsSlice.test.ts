@@ -1,9 +1,13 @@
 import { RobotsStructure, RobotStructure } from "../../../types";
-import { loadRobotsActionCreator, robotsReducer } from "./robotsSlice";
+import {
+  loadRobotsActionCreator,
+  robotsReducer,
+  deleteRobotActionsCreator,
+} from "./robotsSlice";
 
 describe("Given a robotsReducer function", () => {
   const robotIBM: RobotStructure = {
-    id: "",
+    id: "ibm",
     name: "IBM",
     creation: new Date(628021800000),
     endurance: 1,
@@ -11,7 +15,7 @@ describe("Given a robotsReducer function", () => {
   };
 
   const robotHAL: RobotStructure = {
-    id: "",
+    id: "hal",
     name: "HAL",
     creation: new Date(628022000000),
     endurance: 1,
@@ -29,6 +33,21 @@ describe("Given a robotsReducer function", () => {
       const newRobots = robotsReducer(initalRobots, loadRobotsAction);
 
       expect(newRobots).toStrictEqual(expectedRobots);
+    });
+  });
+
+  describe("Given a deleteRobot function", () => {
+    describe("When it receives a list with two robots named IBM and HAL and a remove HAL action", () => {
+      test("Then it should return a list with just IBM", () => {
+        const students: RobotsStructure = [robotIBM, robotHAL];
+
+        const removeHalAction = deleteRobotActionsCreator(robotHAL.id);
+        const expectedNewRobots: RobotsStructure = [robotIBM];
+
+        const newRobots = robotsReducer(students, removeHalAction);
+
+        expect(newRobots).toStrictEqual(expectedNewRobots);
+      });
     });
   });
 });

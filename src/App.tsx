@@ -1,12 +1,7 @@
-import Robot from "./components/Robot/Robot";
+import { Layout } from "./components/Layout/Layout";
 
 const App = () => {
-  return (
-    <div>
-      <h1>ROBOT APP</h1>
-      <Robot />
-    </div>
-  );
+  return <Layout />;
 };
 
 export default App;

@@ -42,7 +42,7 @@ const RobotStyled = styled.article`
     align-items: center;
     margin-bottom: 20px;
 
-    &_edit {
+    &__edit {
       color: black;
       padding: 5px;
       width: 100px;
@@ -54,7 +54,7 @@ const RobotStyled = styled.article`
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
       }
     }
-    &_delete {
+    &__delete {
       color: black;
       padding: 5px;
       width: 100px;

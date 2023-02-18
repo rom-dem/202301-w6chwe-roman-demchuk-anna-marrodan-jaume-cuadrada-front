@@ -8,15 +8,17 @@ const Robot = (): JSX.Element => {
         src="https://designobserver.com/media/images/mondrian/40381-8_moxi_m.jpg"
         alt="robot"
         className="image"
+        height="258"
+        width="258"
       ></img>
       <div className="robot-info">
-        <span>Velocity: 10</span>
-        <span>Resistance: 20</span>
+        <span>Speed: 10</span>
+        <span>Endurance: 20</span>
         <span>Creation date: 02/03/2023</span>
       </div>
       <div className="buttons-container">
-        <button className="buttons-container_edit">EDIT</button>
-        <button className="buttons-container_delete">DELETE</button>
+        <button className="buttons-container__edit">EDIT</button>
+        <button className="buttons-container__delete">DELETE</button>
       </div>
     </RobotStyled>
   );

@@ -1,8 +1,9 @@
 import Robot from "../Robot/Robot";
+import RobotsListStyled from "./RobotsListStyled";
 
 const RobotsList = (): JSX.Element => {
   return (
-    <>
+    <RobotsListStyled>
       <li>
         <Robot />
       </li>
@@ -12,7 +13,7 @@ const RobotsList = (): JSX.Element => {
       <li>
         <Robot />
       </li>
-    </>
+    </RobotsListStyled>
   );
 };
 

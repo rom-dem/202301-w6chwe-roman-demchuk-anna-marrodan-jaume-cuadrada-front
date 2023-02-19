@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
-import "./index.css";
 import HomePage from "./components/Pages/HomePage/HomePage";
 import { Provider } from "react-redux";
 import { store } from "./store";
+import GlobalStyles from "./GlobalStyles";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +22,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
+      <GlobalStyles />
       <RouterProvider router={router} />
     </Provider>
   </React.StrictMode>

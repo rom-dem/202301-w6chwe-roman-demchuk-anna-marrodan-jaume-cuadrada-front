@@ -23,8 +23,6 @@ body {
   font-family: var(--displayFont);
   font-size: 1.25rem;
   margin: 0;
-  font-family: var(--displayFont);
-  font-size: 1.25rem;
   background-color: var(--primaryColor);
   color: #fff;
 

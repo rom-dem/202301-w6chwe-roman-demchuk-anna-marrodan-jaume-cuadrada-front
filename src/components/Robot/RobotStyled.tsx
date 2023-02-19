@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const RobotStyled = styled.article`
   box-sizing: border-box;
-  height: 520px;
+  height: 550px;
   width: 320px;
   border-radius: 15px;
   background-color: #3d3d3d;
@@ -13,27 +13,29 @@ const RobotStyled = styled.article`
   box-shadow: 0px 4px 10px white;
   font-family: press-start-2p, sans-serif;
 
-  h2 {
-    font-size: bold;
-    color: #a9a9a9;
-    -webkit-text-stroke: 2px black;
-  }
-
-  .image {
-    border: 1px solid black;
-    object-fit: cover;
-    max-width: 100%,
-    border-radius: 15px;
-    &:hover {
-      transform: scale(1.1);
+  .robot {
+    &__title {
+      font-size: bold;
+      color: #a9a9a9;
+      -webkit-text-stroke: 2px black;
+      padding: 15px;
     }
-  }
 
-  .robot-info {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    &__image {
+      border: 1px solid black;
+      object-fit: cover;
+      max-width: 100%;
+      border-radius: 15px;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    &__info {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
   .buttons-container {

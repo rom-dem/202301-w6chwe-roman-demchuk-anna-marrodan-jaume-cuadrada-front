@@ -8,8 +8,8 @@ const Robot = (): JSX.Element => {
         src="https://designobserver.com/media/images/mondrian/40381-8_moxi_m.jpg"
         alt="robot"
         className="image"
-        height="258"
-        width="258"
+        height="256"
+        width="256"
       ></img>
       <div className="robot-info">
         <span>Speed: 10</span>

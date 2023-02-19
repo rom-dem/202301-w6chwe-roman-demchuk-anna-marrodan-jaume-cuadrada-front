@@ -21,6 +21,8 @@ const RobotStyled = styled.article`
 
   .image {
     border: 1px solid black;
+    object-fit: cover;
+    max-width: 100%,
     border-radius: 15px;
     &:hover {
       transform: scale(1.1);
@@ -46,7 +48,7 @@ const RobotStyled = styled.article`
       color: black;
       padding: 5px;
       width: 100px;
-      border-radius: 0 0 0 40px;
+      border-radius: 0 0 0 20px;
       background-color: #a9a9a9;
       &:hover {
         background-color: #33a0ff;
@@ -58,7 +60,7 @@ const RobotStyled = styled.article`
       color: black;
       padding: 5px;
       width: 100px;
-      border-radius: 0 40px 0 0;
+      border-radius: 0 20px 0 0;
       background-color: #a9a9a9;
       &:hover {
         background-color: #ff3333;

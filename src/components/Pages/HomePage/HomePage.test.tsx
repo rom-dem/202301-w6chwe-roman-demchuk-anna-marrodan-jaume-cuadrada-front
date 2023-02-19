@@ -1,5 +1,7 @@
 import { render, screen } from "@testing-library/react";
+import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
+import { store } from "../../../store";
 import HomePage from "./HomePage";
 
 describe("Given a HomePage component", () => {
@@ -8,9 +10,11 @@ describe("Given a HomePage component", () => {
       const cardText = "Robot's list";
 
       render(
-        <BrowserRouter>
-          <HomePage />
-        </BrowserRouter>
+        <Provider store={store}>
+          <BrowserRouter>
+            <HomePage />
+          </BrowserRouter>
+        </Provider>
       );
 
       const expectedHeader = screen.getByRole("heading", { name: cardText });

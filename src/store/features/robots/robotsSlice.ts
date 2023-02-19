@@ -10,8 +10,13 @@ const robotsSlice = createSlice({
     loadRobots: (currentRobots, action: PayloadAction<RobotsStructure>) => [
       ...action.payload,
     ],
+    deleteRobot: (currentRobots, action: PayloadAction<string>) =>
+      currentRobots.filter((robot) => robot.id !== action.payload),
   },
 });
 
 export const robotsReducer = robotsSlice.reducer;
-export const { loadRobots: loadRobotsActionCreator } = robotsSlice.actions;
+export const {
+  loadRobots: loadRobotsActionCreator,
+  deleteRobot: deleteRobotActionsCreator,
+} = robotsSlice.actions;

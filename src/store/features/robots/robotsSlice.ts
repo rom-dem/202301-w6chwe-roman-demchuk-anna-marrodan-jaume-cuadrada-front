@@ -11,7 +11,7 @@ const robotsSlice = createSlice({
       ...action.payload,
     ],
     deleteRobot: (currentRobots, action: PayloadAction<string>) =>
-      currentRobots.filter((robot) => robot.id !== action.payload),
+      currentRobots.filter((robot) => robot._id !== action.payload),
   },
 });
 

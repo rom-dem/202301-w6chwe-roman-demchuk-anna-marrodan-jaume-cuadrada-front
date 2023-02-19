@@ -1,7 +1,8 @@
 export interface RobotStructure {
-  id: string;
+  _id: string;
+  image: string;
   name: string;
-  creation: Date;
+  creation: string;
   endurance: number;
   speed: number;
 }

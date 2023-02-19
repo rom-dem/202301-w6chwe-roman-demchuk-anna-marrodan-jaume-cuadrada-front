@@ -7,17 +7,19 @@ import {
 
 describe("Given a robotsReducer function", () => {
   const robotIBM: RobotStructure = {
-    id: "ibm",
+    _id: "ibm",
+    image: "",
     name: "IBM",
-    creation: new Date(628021800000),
+    creation: "",
     endurance: 1,
     speed: 1,
   };
 
   const robotHAL: RobotStructure = {
-    id: "hal",
+    _id: "hal",
+    image: "",
     name: "HAL",
-    creation: new Date(628022000000),
+    creation: "",
     endurance: 1,
     speed: 1,
   };
@@ -41,7 +43,7 @@ describe("Given a robotsReducer function", () => {
       test("Then it should return a list with just IBM", () => {
         const students: RobotsStructure = [robotIBM, robotHAL];
 
-        const removeHalAction = deleteRobotActionsCreator(robotHAL.id);
+        const removeHalAction = deleteRobotActionsCreator(robotHAL._id);
         const expectedNewRobots: RobotsStructure = [robotIBM];
 
         const newRobots = robotsReducer(students, removeHalAction);
